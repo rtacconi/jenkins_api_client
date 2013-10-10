@@ -182,7 +182,7 @@ module JenkinsApi
       def delete(node_name)
         @logger.info "Deleting node '#{node_name}'"
         if list.include?(node_name)
-          @client.api_post_request("/computer/#{node_name}/doDelete")
+          p @client.api_post_request("/computer/#{node_name}/doDelete")
         else
           raise "The specified node '#{node_name}' doesn't exist in Jenkins."
         end
